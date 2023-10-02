@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Fund. Web | Livros</title>
+</head>
+<body>
+    <header>
+        <h1>Fundamentos da Web</h1>
+        <h3>Exercícios</h3>
+    </header>
+
+    <nav class="grey-nav">
+        <a href="index.html">Retomar</a>
+    </nav>
+
+    <main>
+        <section id="livros">           
+            <h1>Cadastro de Livros</h1>
+            <p>
+                Nesta atividade, você deve desenvolver uma tela de cadastro de livros para uma biblioteca.
+                Seus dados devem ser enviados numa requisição HTTP com método POST para a URL http://httpbin.org/post
+            </p>
+        
+            <form action="http://httpbin.org/post" method="POST">
+                <fieldset>
+                    <legend>Cadastro de Livros</legend>
+
+                    <div class="fields">
+                        <label for="titulo">Título
+                            <input type="text" name="livro_titulo" id="titulo" placeholder="Digite o título do livro">
+                        </label><br>
+            
+                        <label for="descricao">Descrição
+                            <textarea name="livro_descricao" id="descricao" cols="30" rows="10"></textarea>
+                        </label><br>
+            
+                        <label for="autores">Autores
+                            <input name="livro_autor" type="text" id="autores" placeholder="Digite uma descrição para o livro">
+                        </label><br>
+                        
+                        <label for="estilo">Estilo
+                            <select name="livro_estilo" id="estilo"> <br>
+                                <option value="acad">Acadêmico</option>
+                            </select>
+                        </label><br>
+                        
+                    </div>
+
+                    <div class="buttons">
+                        <input type="submit" value="Adicionar" class="botao">
+                        <button class="botao">Limpar</button>
+                    </div>
+    
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>
