@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif;
+}
+
+header {
+    background-color: #222;
+}
+
+nav {
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-size: .8rem;
+}
+
+nav ul li a {
+    padding: 0.7rem 1rem;
+    text-decoration: none;
+    color: #fff;
+    transition: .3s;
+}
+
+nav ul li a:hover {
+    background-color: #449c44;
+}
+
+.sect{
+    padding: 45px 0;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+
+header .titulo{
+    color: white;
+}
+
+header .subtitulo{
+    text-transform: uppercase;
+    color: #aaa;
+    font-size: 1.25em;
+    margin-bottom: 0px;
+
+}
+
+.titulo {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.subtitulo{
+    color: #666;
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.etiam-button{
+    color: white;
+    font-size: .8rem;
+    margin-top: 45px;
+    padding: 15px 35px;
+    background-color: #449c44;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+
+#quadradinhos ul{
+    width: 80%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+
+}
+
+#quadradinhos ul li{
+    width: 32%;
+    padding: 25px 15px;
+    /* height: 180px; */
+    border: 2px solid #ddd;
+    border-radius: 7px;
+    text-align: center;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+#quadradinhos ul li p{
+    font-size: .85rem;
+    
+}
+
+.fa-solid{
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+#verdin{
+    background-color: #449c44;
+    color: #fff;
+}
+
+#verdin .subtitulo{
+    color: #ddd;
+}
+
+.paragraph {
+    width: 80%;
+    text-align: center;
+    font-size: .85rem;
+
+}
+
+#verdin .etiam-button{
+    color: #449c44;
+    background-color: #fff;
+}
+
+footer{
+    background-color: #333;
+    text-align: center;
+    padding: 40px 0;
+    color: #ccc;
+}
+
+footer strong{
+    color:white
+}

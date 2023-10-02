@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <main>
+        <h1>Dados do usuário</h1>
+
+        <form action="http://httpbin.org/post" method="POST">
+            <label for="nome" class="field">Nome:
+                <input type="text" name="user_name" required>
+            </label>
+
+            <label for="idade" class="field">Idade:
+                <input type="number" name="user_idade" id="idade" min="18" max="120" required>
+            </label>
+
+            <label for="user_genre" class="field">Selecione seu gênero:
+                <div id="radio-buttons">
+                    <label for="generoM"><input type="radio" name="user_genre" id="generoM" value="M">Masculino</label>
+                    <label for="generoF"><input type="radio" name="user_genre" id="generoF" value="F">Feminino</label>
+                    <label for="generoO"><input type="radio" name="user_genre" id="generoO" value="O">Outro</label>
+                </div>
+            </label>
+
+            <label for="email" class="field">Email:
+                <input type="email" name="user_email" id="email" required>
+            </label>
+
+            <label for="senha" class="field">Senha: 
+                <input type="password" name="user_password" id="senha" pattern=".{6,}" placeholder="No mínimo 6 caracteres" required>
+            </label>
+
+            <label for="pais" class="field">Escolha um país:
+                <select name="user_pais" id="pais">
+                    <option value="br">Brasil</option>
+                    <option value="us">Estados Unidos</option>
+                    <option value="ca">Canadá</option>
+                    <option value="ot">Outros</option>
+                </select>
+            </label>
+
+            <label for="comentario" class="field">Digite um comentário ou observação adicional:
+                <textarea name="user_coment" id="comentario" cols="30" rows="10"></textarea>
+            </label>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+</body>
+
+</html>
