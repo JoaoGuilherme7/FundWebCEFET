@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fund. Web | Contatos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Fundamentos da Web</h1>
+        <h3>Exercícios</h3>
+    </header>
+
+    <nav class="grey-nav">
+        <a href="index.html">Retomar</a>
+    </nav>
+
+    <main>
+        <section id="Contatos">
+
+            <h2>Contatos</h2>
+
+            <p class="descricao">
+                Nesta atividade, você deve desenvolver uma tela de contatos de um site. Considere a natureza dos campos.
+                Seus dados devem ser enviados numa requisição HTTP com método POST para a URL http://httpbin.org/post
+            </p>
+
+            <form action="http://httpbin.org/post" method="POST">
+                <fieldset>
+                    <legend>Entre em contato conosco</legend>
+
+                    <div class="fields">
+
+                        <label for="nome">Nome
+                            <input type="text" id="nome" name="contato_nome" placeholder="Digite seu nome">
+                        </label><br>
+
+                        <label for="assunto">Assunto
+                            <input type="date" name="contato_assunto" id="assunto">
+                        </label><br>
+
+                        <label for="ocorrencia">Data da ocorrência
+                            <input type="date" name="data_ocorrencia" id="ocorrencia">
+                        </label><br>
+
+                        <label for="foto_ocorrencia">Foto da ocorrência
+                            <input type="file" name="Ecolher arquivo" id="foto_ocorrencia" placeholder="Nenhum arquivo escolhido">
+                        </label><br>
+
+                        <label for="telefone">Telefone
+                            <input type="number" id="telefone" name="contato_telefone" placeholder="Digite seu telefone">
+                        </label><br>
+
+                        <label for="email">Email
+                            <input type="email" name="" id="email" placeholder="Digite seu email">
+                        </label><br>
+
+                        <label for="mensagem">Mensagem
+                            <textarea name="contato_mensagem" id="mensagem" cols="30" rows="10"></textarea>
+                        </label><br>
+
+                        <label for="estilo">Estilo
+                            <select name="" id="estilo">
+                                <option value="acad">Academico</option>
+                                <option value="bla">bla</option>
+                                <option value="ble">ble</option>
+                            </select>
+                        </label><br>
+
+                    </div>
+
+                    <div class="buttons">
+                        <input type="submit" class="botao" value="Adicionar">                
+                        <button class="botao">Limpar</button>
+                    </div>
+
+
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>
