@@ -1,0 +1,68 @@
+/* 
+320px — 480px: Mobile devices.
+481px — 768px: iPads, Tablets.
+769px — 1024px: Small screens, laptops.
+1025px — 1200px: Desktops, large screens.
+1201px and more — Extra large screens, TV.
+*/
+
+@media screen and (max-width: 769px) {
+
+    header, main, footer{
+        width: 90%;
+    }
+
+    /* header h1{
+        width: 25%;
+        font-size: .8rem;
+    } */
+
+    /* header nav ul{
+        font-size: .6rem;
+    } */
+
+    main{
+        padding: 7px 20px 100px;
+    }
+
+
+    .banner{
+        max-height: 350px;
+        height: fit-content;
+    }
+
+    .banner h1{
+        font-size: 3rem;
+    }
+
+    .portfolio{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .box{
+        min-height: 200px;
+        height: 100%;
+    }
+
+    .portfolio :last-child{
+        grid-column: 1/-1;
+
+    }
+
+    .testimonials article{
+        height: fit-content;
+        font-size: .8rem;    
+    }
+
+    .testimonials article:first-child p a{
+        display: block;
+        position: relative;
+        font-size: 1.2rem;
+        color: #0a435a;
+    }
+
+    footer{
+        display: none;
+    }
+}
