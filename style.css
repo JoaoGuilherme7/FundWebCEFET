@@ -69,7 +69,6 @@ section{
     transition: .5s ease-in-out;
 }
 
-
 .project:hover{
     transform: translateY(-10px);
 
@@ -79,10 +78,7 @@ section{
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-direction: alternate;
-
 }
-
-
 
 .project h2{
     color: #fff;
@@ -118,3 +114,22 @@ section{
     
 }
 
+
+@media screen and (max-width: 769px) {
+
+    nav{
+        display: block;
+        text-align: center;
+        font-size: .8rem;
+    }
+
+    section{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width:480px) {
+    section{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
