@@ -148,6 +148,10 @@ section{
 
         font-size:1.6vw;
     }
+
+    .project:hover{
+        transform: translateY(0px);
+    }
 }
 
 @media screen and (max-width:480px) {
@@ -167,4 +171,6 @@ section{
         height: 48vw;
         font-size:3vw;
     }
+
+    
 }
