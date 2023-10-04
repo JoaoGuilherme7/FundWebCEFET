@@ -40,7 +40,6 @@ p{
 
 ul{
     list-style: none;
-    /* border: 1px solid black; */
 }
 
 li{
@@ -95,7 +94,7 @@ textarea{
 }
 
 .fields{
-    margin: 0 9%;
+    margin: 0 9% 0 0;
 }
 
 .buttons{

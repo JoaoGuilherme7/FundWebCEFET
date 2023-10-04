@@ -12,15 +12,6 @@
         width: 90%;
     }
 
-    /* header h1{
-        width: 25%;
-        font-size: .8rem;
-    } */
-
-    /* header nav ul{
-        font-size: .6rem;
-    } */
-
     main{
         padding: 7px 20px 100px;
     }
@@ -37,7 +28,6 @@
 
     .portfolio{
         grid-template-columns: repeat(2, 1fr);
-
     }
 
     .box{
@@ -51,8 +41,12 @@
     }
 
     .testimonials article{
-        height: fit-content;
         font-size: .8rem;    
+    }
+
+    .testimonials article:first-child p{
+
+        padding-bottom: 0;
     }
 
     .testimonials article:first-child p a{
