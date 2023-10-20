@@ -45,9 +45,6 @@
 
     .box button{
         left:20%;
-        
-        
-           
     }
 
     .testimonials{
@@ -59,10 +56,6 @@
     }
 
     .testimonials article:first-child{
-        /* display: grid;
-        grid-template-columns: repeat(1,1fr);
-        gap: 0 20px; */
-
         display: block;
         margin-bottom: 10px;
 
@@ -78,7 +71,6 @@
 
     .comments blockquote{
         font-size: 1.1rem;
-
     }
 
     .comments p{
@@ -87,5 +79,4 @@
         text-align: right;
     }
 
-    
 }
