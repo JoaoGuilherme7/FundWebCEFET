@@ -97,6 +97,11 @@ section{
     margin-left: .7vw;
 }
 
+#manipuladorTexto{
+    background-image: linear-gradient(0deg, #000000d0, #ffffff00, #ffffff00), url(ManipularTexto/manipulador_design.png);
+    animation-duration: 5s;
+}
+
 #james{
     background-image: linear-gradient(0deg, #000000d0, #ffffff00, #ffffff00), url(Consultoria_James_Responsivo/assets/index.png);
 }
@@ -111,8 +116,7 @@ section{
 }
 
 #plaindisplay{
-    background-image: linear-gradient(0deg, #000000d0, #ffffff00, #ffffff00), url(PLAINDISPLAY/plaindisplay_desktop.jpg);
-    
+    background-image: linear-gradient(0deg, #000000d0, #ffffff00, #ffffff00), url(PLAINDISPLAY/plaindisplay_desktop.jpg);   
 }
 
 #loremIps{

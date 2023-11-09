@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<title>Prática de Laboratório 6 - JavaScript</title>
+	<style type="text/css">
+		* {
+			font-family: Roboto, Helvetica, sans-serif;
+		}
+
+		body {
+			background-color: #ddd;
+		}
+
+		header,
+		main {
+			width: 900px;
+			margin: 0 auto;
+			background-color: #fff;
+			box-shadow: 3px 5px 2px #ccc;
+			padding: 20px 10px;
+
+		}
+
+		main {
+			min-height: 80vh;
+		}
+
+		header {
+			border-radius: 15px 15px 0px 0;
+		}
+
+		header img {
+			width: 200px;
+			height: 150px;
+			float: left;
+			margin-right: 25px
+		}
+
+		header h1 {
+			font-size: 1.5em;
+			margin: 0;
+		}
+
+		header h3 {
+			margin: 5px 0 10px;
+			font-style: italic;
+			font-weight: normal;
+			font-size: 1.1em;
+		}
+
+		header h4 {
+			margin: 5px 0;
+			font-weight: normal;
+			font-size: 0.8em;
+		}
+
+		main h4 {
+			text-align: center;
+		}
+
+		main>p {
+			font-size: 0.9em;
+			margin-left: 15px;
+		}
+
+		main li {
+			margin-bottom: 20px;
+			margin-right: 15px;
+			line-height: 1.5em;
+		}
+
+		article {
+			background-color: #ddd;
+			font-size: 0.8em;
+			box-sizing: border-box;
+			padding: 5px 10px;
+			line-height: 1.2em;
+		}
+
+		.destaque {
+			background-color: #ff0;
+			padding: 2px;
+			font-weight: bold;
+		}
+	</style>
+	<script src="./manipulador.js" defer></script>
+</head>
+
+<body>
+	<header>
+		<img
+			src="data:image/png;base64,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">
+		<h1>Centro Federal de Educação Tecnológica do Rio de Janeiro - Celso Suckow da Fonseca</h1>
+		<h3>Campus Nova Friburgo</h3>
+		<h4>Curso de Bacharelado em Sistemas de Informação</h4>
+		<h4>Professor Rafael Escalfoni</h4>
+	</header>
+	<main>
+		<h4>Fundamentos da Web - Prática de laboratório</h4>
+
+		<p>
+			Leia os enunciados das questões com atenção. Responda à tarefa no MS Teams com este arquivo completo.
+		</p>
+		<p>
+			Não altere o nome das variáveis no seu script. Seu script será testado nesta página, sem adaptações.
+		</p>
+
+		<p>
+			Bons estudos!
+		</p>
+
+		<ol>
+			<li>
+				Faça um programa que leia uma frase e retorne o número de vogais encontradas.
+
+				<fieldset>
+					<legend>Questão 1</legend>
+					<p>
+						<label for="q1_frase">Frase</label>
+						<br>
+						<textarea id="q1_frase"></textarea>
+						<br>
+						<button id="q1_executa">Adicionar</button>
+					</p>
+					<p id="q1_resposta">
+						<strong></strong>
+					</p>
+				</fieldset>
+
+			</li>
+			<li>
+				Faça um programa que inverte uma frase digitada
+				<fieldset>
+					<legend>Questão 2</legend>
+					<p>
+						<label for="q2_frase">Digite uma frase</label>
+						<br>
+						<textarea id="q2_frase"></textarea>
+						<br>
+						<button id="q2_executa">Inverte Frase</button>
+					</p>
+					<p id="q2_resposta">
+						<strong></strong>
+					</p>
+				</fieldset>
+			</li>
+			<li>
+				Faça um programa que conte a ocorrência das palavras a uma frase.
+
+				<fieldset>
+					<legend>Questão 3</legend>
+					<p>
+						<label for="q3_frase">Frase</label>
+						<textarea id="q3_frase"></textarea>
+						<br>
+						<input type="text" id="q3_palavra" placeholder="Pesquisar palavra">
+						<button id="q3_executa">Pesquisar</button>
+					</p>
+					<p id="q3_resultado">
+						<strong>A palavra "TESTE" aparece 5 vezes.</strong>
+					</p>
+
+				</fieldset>
+			</li>
+
+			<li>
+				Faça um programa que dado o texto da questão, e uma entrada de texto, ao pressionar o botão Pesquisar,
+				indique o número de ocorrências em que o trecho de entrada ocorre, destacando os trechos com cor de
+				fundo amarelo. Para isto, utilize &lt;span class="destaque"&gt; no entorno das ocorrências. Caso a
+				entrada de texto não exista no texto da questão, exiba uma mensagem indicando que a busca não retornou
+				nenhum resultado.
+				<br>
+				<br>
+				<em>Para exemplificar o uso dos destaques, a primeira palavra está usando o artifício do span. Apague
+					antes de iniciar sua atividade.</em>
+				<br>
+				<br>
+				<fieldset>
+					<legend>Questão 4</legend>
+					<article id="questao4_texto">
+						<p>
+							<span class="destaque"> JavaScript </span> (frequentemente abreviado como JS) é uma linguagem
+							de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca
+							e multiparadigma (protótipos, orientado a objeto, imperativo e, funcional). Juntamente com
+							HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript
+							permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da
+							web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo
+							JavaScript dedicado para executá-lo.
+						</p>
+						<p>
+							É atualmente a principal linguagem para programação client-side em navegadores web. É também
+							bastante utilizada do lado do servidor através de ambientes como o node.js.
+						</p>
+						<p>
+							Como uma linguagem multiparadigma, o JavaScript suporta estilos de programação orientados a
+							eventos, funcionais e imperativos (incluindo orientado a objetos e prototype-based),
+							apresentando recursos como fechamentos (closures) e funções de alta ordem comumente
+							indisponíveis em linguagens populares como Java e C++. Possui APIs para trabalhar com texto,
+							matrizes, datas, expressões regulares e o DOM, mas a linguagem em si não inclui nenhuma E/S,
+							como instalações de rede, armazenamento ou gráficos, contando com isso no ambiente host em
+							que está embutido.
+						</p>
+						<p>
+							Foi originalmente implementada como parte dos navegadores web para que scripts pudessem ser
+							executados do lado do cliente e interagissem com o usuário sem a necessidade deste script
+							passar pelo servidor, controlando o navegador, realizando comunicação assíncrona e alterando
+							o conteúdo do documento exibido, porém os mecanismos JavaScript agora estão incorporados em
+							muitos outros tipos de software host, incluindo servidores em servidores e bancos de dados
+							da Web e em programas que não são da Web, como processadores de texto e PDF, e em tempo de
+							execução ambientes que disponibilizam JavaScript para escrever aplicativos móveis e de
+							desktop, incluindo widgets de área de trabalho.
+						</p>
+						<p>
+							Os termos Vanilla JavaScript e Vanilla JS se referem ao JavaScript não estendido por
+							qualquer estrutura ou biblioteca adicional. Scripts escritos em Vanilla JS são códigos
+							JavaScript simples.
+						</p>
+						<p>
+							Embora existam semelhanças entre JavaScript e Java, incluindo o nome da linguagem, a sintaxe
+							e as respectivas bibliotecas padrão, as duas linguagens são distintas e diferem muito no
+							design; JavaScript foi influenciado por linguagens de programação como Self e Scheme.
+						</p>
+						<p>
+							É baseada em ECMAScript, padronizada pela Ecma international nas especificações ECMA-262 e
+							ISO/IEC 16262.
+						</p>
+					</article>
+
+					<input type="text" id="q4_termo" placeholder="Digite um texto">
+					<button id="q4_executa">Pesquisar</button>
+
+					<p id="q4_resposta">
+						O termo <q>JavaScript</q> aparece 4 vezes. <em>Apague o exemplo antes de começar</em>
+					</p>
+				</fieldset>
+			</li>
+			<li>
+				Faça um programa que substitua palavras em uma frase.
+				<fieldset>
+					<legend>Questão 5</legend>
+					<article id="questao5_texto">
+						<p>
+							JavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada
+							estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma
+							(protótipos, orientado a objeto, imperativo e, funcional). Juntamente com HTML e CSS, o
+							JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript permite
+							páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A
+							grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript
+							dedicado para executá-lo.
+						</p>
+						<p>
+							É atualmente a principal linguagem para programação client-side em navegadores web. É também
+							bastante utilizada do lado do servidor através de ambientes como o node.js.
+						</p>
+						<p>
+							Como uma linguagem multiparadigma, o JavaScript suporta estilos de programação orientados a
+							eventos, funcionais e imperativos (incluindo orientado a objetos e prototype-based),
+							apresentando recursos como fechamentos (closures) e funções de alta ordem comumente
+							indisponíveis em linguagens populares como Java e C++. Possui APIs para trabalhar com texto,
+							matrizes, datas, expressões regulares e o DOM, mas a linguagem em si não inclui nenhuma E/S,
+							como instalações de rede, armazenamento ou gráficos, contando com isso no ambiente host em
+							que está embutido.
+						</p>
+						<p>
+							Foi originalmente implementada como parte dos navegadores web para que scripts pudessem ser
+							executados do lado do cliente e interagissem com o usuário sem a necessidade deste script
+							passar pelo servidor, controlando o navegador, realizando comunicação assíncrona e alterando
+							o conteúdo do documento exibido, porém os mecanismos JavaScript agora estão incorporados em
+							muitos outros tipos de software host, incluindo servidores em servidores e bancos de dados
+							da Web e em programas que não são da Web, como processadores de texto e PDF, e em tempo de
+							execução ambientes que disponibilizam JavaScript para escrever aplicativos móveis e de
+							desktop, incluindo widgets de área de trabalho.
+						</p>
+						<p>
+							Os termos Vanilla JavaScript e Vanilla JS se referem ao JavaScript não estendido por
+							qualquer estrutura ou biblioteca adicional. Scripts escritos em Vanilla JS são códigos
+							JavaScript simples.
+						</p>
+						<p>
+							Embora existam semelhanças entre JavaScript e Java, incluindo o nome da linguagem, a sintaxe
+							e as respectivas bibliotecas padrão, as duas linguagens são distintas e diferem muito no
+							design; JavaScript foi influenciado por linguagens de programação como Self e Scheme.
+						</p>
+						<p>
+							É baseada em ECMAScript, padronizada pela Ecma international nas especificações ECMA-262 e
+							ISO/IEC 16262.
+						</p>
+					</article>
+
+					<input type="text" id="q5_procurar" placeholder="Procurar">
+					<input type="text" id="q5_substituir" placeholder="Substituir por">
+					<button id="q5_executa">Substituir</button>
+
+
+				</fieldset>
+			</li>
+		</ol>
+	</main>
+
+</body>
+
+</html>
