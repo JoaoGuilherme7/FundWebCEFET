@@ -97,6 +97,11 @@ section{
     margin-left: .7vw;
 }
 
+#receitasDinamicas{
+    background-image: linear-gradient(0deg, #000000d0, #ffffff00, #ffffff00), url(Receitas_Dinamicas/design.png);
+    animation-duration: 5s;
+}
+
 #manipuladorTexto{
     background-image: linear-gradient(0deg, #000000d0, #ffffff00, #ffffff00), url(ManipularTexto/manipulador_design.png);
     animation-duration: 5s;
