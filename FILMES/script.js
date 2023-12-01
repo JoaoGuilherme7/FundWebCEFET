@@ -60,13 +60,13 @@ const construirCardFilme = (filme, listaDeFilmes) =>{
     }
     cardTop.appendChild(classificacao);
 
-
     const nomeFilme = document.createElement('h3');
     nomeFilme.innerText = filme.titulo;
     cardTopDetails.appendChild(nomeFilme);
     
     const generos = document.createElement('p');
     filme.generos.forEach(genero =>{ generos.innerText+=genero + ', '});
+    
     cardTopDetails.appendChild(generos);
 
     const elenco = document.createElement('p');
