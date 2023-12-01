@@ -97,6 +97,11 @@ section{
     margin-left: .7vw;
 }
 
+#lets-travel{
+    background-image: linear-gradient(0deg, #000000d0, #ffffff00, #ffffff00), url(Lets-Travel/design.png);
+    animation-duration: 2s;
+}
+
 #filmes{
     background-image: linear-gradient(0deg, #000000d0, #ffffff00, #ffffff00), url(FILMES/design.png);
     animation-duration: 5s;

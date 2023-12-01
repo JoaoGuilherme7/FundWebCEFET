@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+html {
+    font-size: 62.5%;
+    font-size: 0.73vw;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #444;
+    font-size: 1.6rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ::: MAIN ::: */
+
+.outdoor{
+    overflow: hidden;
+}
+
+.outdoorSlide{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-grow: 1fr;
+    transition: transform 1s;
+}
+
+.outdoorCityLink{
+    flex: 0 0 100%;
+}
+
+.outdoorSlideItem{
+    position: relative;
+}
+
+.outdoorSlideItem img{
+    width: 100%;
+    height: 100%;
+}
+
+.outdoorSlideItem h1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 15.0rem;
+    font-family: 'Dancing Script', cursive;
+    background-image: linear-gradient(to top, #444, rgba(0, 0, 0, 0.158) 50%);
+}
+
+
+.container {
+    margin-top: 1.0rem;
+    width: 100%;
+    padding: 1.5rem 3.0rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.0rem;
+    justify-content: space-between;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 23.5rem;
+    display: flex;
+    overflow: hidden;
+    border-radius: 1.0rem;
+}
+
+.card .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    transition: 1s;
+}
+
+.slide-radios {
+    width: 100%;
+    display: flex;
+    gap: .7rem;
+    justify-content: center;
+    position: absolute;
+    bottom: 5%;
+    z-index: 2;
+    opacity: 0.7;
+}
+
+.card .slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1.0rem;
+
+    background-image: linear-gradient(to top, #ffffff00, #0000007e);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-details .stars {
+    display: block;
+    width: 9.0rem;
+}
+
+
+.cityError {
+    width: 100%;
+    text-align: center;
+    margin-top: 2.0rem;
+}
+

@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #444;
+    font-size: 1.6rem;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.0rem 3.0rem;
+    background-color: rgb(113, 206, 94);
+
+}
+
+#nav-logo {
+    width: 11.0rem;
+}
+
+.navBar ul {
+    gap: .5rem;
+    color: #444;
+    font-size: 1.6rem;
+    font-weight: bold
+}
+
+.navBar ul li {
+    padding: .5rem 1.5rem;
+    border-radius: 5.0rem;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.navBar ul li:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+label {
+    background-color: #444;
+    border: .1rem solid #777;
+    padding: 0 .2rem 0 1.2rem;
+    border-radius: 5rem;
+    overflow: hidden;
+
+
+    display: flex;
+    align-items: center;
+}
+
+label input,
+label button {
+    background-color: transparent;
+    outline: none;
+}
+
+#search {
+    width: 32.0rem;
+    height: 3.0rem;
+    border: none;
+    font-size: 1.4rem;
+    color: #bbb;
+}
+
+#search-go {
+    border: .1rem solid #777;
+    color: #777;
+    height: 2.6rem;
+    width: 2.6rem;
+    border-radius: 50%;
+}
+
+nav.travel-options {
+    background-color: #fff;
+    color: #444;
+}
+
+nav.travel-options ul {
+    justify-content: space-between;
+    padding: 0 3.0rem;
+}
+
+nav.travel-options ul li {
+    flex: 1;
+    text-align: center;
+}
+
+nav.travel-options ul li:hover {
+    cursor: pointer;
+}
+
+.travel-option {
+    position: relative;
+
+}
+
+.travel-option h3 {
+    font-weight: 400;
+}
+
+.travel-options-details {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0 0 2.0rem 2.0rem;
+    overflow: hidden;
+    max-height: 0;
+    transition: .5s;
+}
+
+.travel-option:hover .travel-options-details {
+    max-height: 500px;
+    transition: 2s;
+}
+
+.options-detail-list {
+    display: block;
+    text-align: left;
+}

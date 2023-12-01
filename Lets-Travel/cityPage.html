@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="headerStyle.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="./general.js" defer></script>
+    <script src="./cardSlide.js" defer></script>
+    <script src="./createCityPage.js" defer></script>
+
+
+    <title>VR TRAVEL NOVO</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navBar">
+            <a href="./index.html"><img id="nav-logo" src="./logo.svg" alt=""></a>
+
+            <form action="">
+                <label for="search">
+                    <input type="text" name="search" id="search"
+                        placeholder="Bora pra onde? (Pesquise por Dubai ou Orlando)">
+                    <button type="submit" id="search-go"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </label> 
+            </form>
+            
+
+            <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="index.html">home</a></li>
+                <li><a href="#">my account</a></li>
+            </ul>
+
+        </nav>
+
+        <nav class="travel-options">
+            <ul>
+                <li>
+                    <div class="travel-option">
+                        <h3><a href="">Resorts</a></h3>
+                        <div class="travel-options-details">
+                            <ul class="options-detail-list">
+                                <li>Resorts com Praia</li>
+                                <li>Campo</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="travel-option">
+                        <h3><a href="">Hospedagens</a></h3>
+                        <div class="travel-options-details">
+                            <ul class="options-detail-list">
+                                <li>Resorts com Praia</li>
+                                <li>Campo</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="travel-option">
+                        <h3><a href="">Pacotes</a></h3>
+                        <div class="travel-options-details">
+                            <ul class="options-detail-list">
+                                <li>Resorts com Praia</li>
+                                <li>Campo</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="travel-option">
+                        <h3><a href="">Eventos</a></h3>
+                        <div class="travel-options-details">
+                            <ul class="options-detail-list">
+                                <a href="">
+                                    <li>Resorts com Praia</li>
+                                </a>
+                                <a href="">
+                                    <li>Campo</li>
+                                </a>
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="travel-option">
+                        <h3><a href="">Ofertas</a></h3>
+                        <div class="travel-options-details">
+                            <ul class="options-detail-list">
+                                <li>Resorts com Praia</li>
+                                <li>Campo</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- <div class="outdoor">
+            <img src="cidades/dubai.png" alt="">
+            <h1>Dubai</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="card">
+                <div class="slide-radios">
+                    <input type="radio" name="0img-idx" id="radio0" checked>
+                    <input type="radio" name="0img-idx" id="radio1">
+                    <input type="radio" name="0img-idx" id="radio2">
+                </div>
+                <div class="slide">
+                    <img src="hoteis/Jumeirah.png" alt="">
+                    <img src="hoteis/Burj.png" alt="">
+                    <img src="hoteis/Jumeirah.png" alt="">
+                </div>
+
+                <div class="card-details">
+                    <h3>Jumeirah Al Qasr</h3>
+                    <img class="stars" src="stars/5.png" alt="">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="slide-radios">
+                    <input type="radio" name="1img-idx" id="radio0" checked>
+                    <input type="radio" name="1img-idx" id="radio1">
+                    <input type="radio" name="1img-idx" id="radio2">
+                </div>
+                <div class="slide">
+                    <img src="hoteis/Burj.png" alt="">
+                    <img src="hoteis/Jumeirah.png" alt="">
+                    <img src="hoteis/Burj.png" alt="">
+                </div>
+
+                <div class="card-details">
+                    <h3>Burj Al Arab</h3>
+                    <img class="stars" src="stars/5.png" alt="">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="slide-radios">
+                    <input type="radio" name="2img-idx" id="radio0" checked>
+                    <input type="radio" name="2img-idx" id="radio1">
+                    <input type="radio" name="2img-idx" id="radio2">
+                </div>
+                <div class="slide">
+                    <img class="card-main-images" src="hoteis/Jumeirah.png" alt="">
+                    <img class="card-main-images" src="hoteis/Burj.png" alt="">
+                    <img class="card-main-images" src="hoteis/Jumeirah.png" alt="">
+
+                </div>
+
+                <div class="card-details">
+                    <h3>Jumeirah Al Qasr</h3>
+                    <img class="stars" src="stars/5.png" alt="">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="slide-radios">
+                    <input type="radio" name="4img-idx" id="radio0" checked>
+                    <input type="radio" name="4img-idx" id="radio1">
+                    <input type="radio" name="4img-idx" id="radio2">
+                </div>
+                <div class="slide">
+                    <img src="hoteis/Burj.png" alt="">
+                    <img src="hoteis/Jumeirah.png" alt="">
+                    <img src="hoteis/Burj.png" alt="">
+                </div>
+
+                <div class="card-details">
+                    <h3>Burj Al Arab</h3>
+                    <img class="stars" src="stars/5.png" alt="">
+                </div>
+            </div> 
+
+        </div>-->
+
+    </main>
+</body>
+
+</html>
