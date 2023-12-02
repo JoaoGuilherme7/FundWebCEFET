@@ -72,7 +72,7 @@ function createHomeOutdoor() {
     cidades.forEach(cidade => {
         const outdoorCityLink = newElement('a');
         outdoorCityLink.classList.add('outdoorCityLink');
-        outdoorCityLink.href = `citypage.html?search=${cidade.nome}`;
+        outdoorCityLink.href = `cityPage.html?search=${cidade.nome}`;
         outdoorSlide.appendChild(outdoorCityLink);
 
         const outdoorSlideItem = newElement('div');
