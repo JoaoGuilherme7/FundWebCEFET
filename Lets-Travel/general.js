@@ -84,7 +84,7 @@ function limparMain() {
 }
 
 function openCityPage(city) {
-    window.location.href = `citypage.html?search=${encodeURIComponent(city)}`;
+    window.location.href = `cityPage.html?search=${encodeURIComponent(city)}`;
 }
 
 seletor('#search-go').addEventListener('click', () => {
